@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="269dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text=" *Chú ý:"
+                android:textColor="@color/black"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="377dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="1.Không mang những thứ liên quan đến cháy"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="377dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="2.Có thái độ và hành vi không phù hợp "
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="377dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="3.Giữ hóa đơn và vòng tay trong suốt thời gian chơi "
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="377dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="4.Cố ý gây mất trật tự, an ninh, an toàn"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="377dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="5.Vui lòng gửi/cất giầy/dép đúng nơi quy định."
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="82dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="377dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="=> Nếu vi phạm 1 trong các quy định trên, quý khách sẽ bị ngưng các hoạt động  "
+                android:textColor="#F80404"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="82dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="* Cảm ơn quý khách đã ủng hộ."
+                android:textColor="#F80404"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="* Chúc quý khách một ngày tốt lành"
+                android:textColor="#F80404"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>

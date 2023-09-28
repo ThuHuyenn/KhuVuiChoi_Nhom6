@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
+
+    <item android:title="Khách Hàng">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_View_Vent"
+                    android:icon="@drawable/ic_event_24"
+                    android:title="Sự kiện" />
+                <item
+                    android:id="@+id/nav_Information"
+                    android:icon="@drawable/ic_information_24"
+                    android:title="Thông Tin" />
+
+                <item
+                    android:id="@+id/nav_Quydinh"
+                    android:icon="@drawable/ic_quydinh"
+                    android:title="Quy định" />
+
+            </group>
+        </menu>
+    </item>
+    <item android:title="Quản lý / Nhân viên">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_Login"
+                    android:icon="@drawable/ic_pass"
+                    android:title="Login " />
+<!--                <item-->
+<!--                    android:id="@+id/nav_hoaDon"-->
+<!--                    android:icon="@drawable/ic_id_hoa_don"-->
+<!--                    android:title="Hóa Đơn " />-->
+
+<!--                <item-->
+<!--                    android:id="@+id/nav_ve"-->
+<!--                    android:icon="@drawable/ic_ticket_24"-->
+<!--                    android:title="Vé " />-->
+<!--                <item-->
+<!--                    android:id="@+id/nav_NhanVien"-->
+<!--                    android:icon="@drawable/ic_people_24"-->
+<!--                    android:title="Nhân viên " />-->
+<!--                <item-->
+<!--                    android:id="@+id/nav_doanhThu"-->
+<!--                    android:icon="@drawable/ic_money"-->
+
+<!--                    android:title="Doanh Thu" />-->
+            </group>
+        </menu>
+    </item>
+
+
+    <item android:title="Người dùng">
+        <menu>
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_logout"
+                android:title="Thoát" />
+        </menu>
+    </item>
+</menu>
