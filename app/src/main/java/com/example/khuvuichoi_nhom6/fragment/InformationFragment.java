@@ -12,7 +12,7 @@ import com.example.khuvuichoi_nhom6.R;
 
 public class InformationFragment extends Fragment {
 
- private Image image;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

@@ -5,7 +5,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DbHelper extends SQLiteOpenHelper {
     public DbHelper(Context context){
-        super(context,"QLDA_Nhom6",null, 1);
+        super(context,"QLDA_Nhom6_1",null, 1);
     }
 
     @Override
@@ -18,6 +18,19 @@ public class DbHelper extends SQLiteOpenHelper {
         db.execSQL(NhanVien);
         String sqlNhanVien    = "INSERT INTO nhanvien VALUES(1,'nhanvien','123',0111,'huyen@gmail.com','nhà A','')";
         db.execSQL(sqlNhanVien);
+        // khach hang
+        String KhachHang = "CREATE TABLE KhachHang(" +
+                "maKH INTEGER  PRIMARY KEY AUTOINCREMENT," +
+                "hoTen TEXT NOT NULL ," +
+                "dienThoai TEXT NOT NULL," +
+                "diaChi TEXT NOT NULL," +
+                "gmail TEXT NOT NULL)";
+        db.execSQL(KhachHang);
+        String ve = "CREATE TABLE ve (" +
+                "maVe INTEGER PRIMARY KEY AUTOINCREMENT," +
+                "status INTEGER NOT NULL )";
+        db.execSQL(ve);
+
 
     }
 
@@ -26,6 +39,8 @@ public class DbHelper extends SQLiteOpenHelper {
         if(oldVersion != newVersion){
             db.execSQL("DROP TABLE IF EXISTS quanly");
             db.execSQL("DROP TABLE IF EXISTS nhanvien");
+            db.execSQL("DROP TABLE IF EXISTS  KhachHang");
+            db.execSQL("DROP TABLE IF EXISTS  ve");
             onCreate(db);
         }
     }

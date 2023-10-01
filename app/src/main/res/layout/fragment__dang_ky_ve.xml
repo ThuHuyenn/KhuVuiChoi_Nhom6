@@ -5,10 +5,18 @@
     android:layout_height="match_parent"
     tools:context=".fragment.Fragment_DangKyVe">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ListView
+        android:id="@+id/lvVe"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Framen_Đăng ký vé" />
+        />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_add_24"
+        android:layout_gravity="right"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="400dp"/>
 
 </FrameLayout>
