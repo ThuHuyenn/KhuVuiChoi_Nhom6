@@ -28,7 +28,7 @@ public class DbHelper extends SQLiteOpenHelper {
         db.execSQL(KhachHang);
         String ve = "CREATE TABLE ve (" +
                 "maVe INTEGER PRIMARY KEY AUTOINCREMENT," +
-                "status INTEGER NOT NULL )";
+                "status TEXT NOT NULL )";
         db.execSQL(ve);
 
 

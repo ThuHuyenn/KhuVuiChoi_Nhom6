@@ -4,6 +4,8 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.os.Build;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,7 +38,7 @@ public class KhachHangAdapter extends ArrayAdapter<KhachHang> {
     private EditText edMaKH, edHoTenKH, edDienThoaiKH, edDiaChiKH, edGmailKH;
     Button btnSave, btnCancel;
     KhachHang item;
-
+    private String maKH;
     public KhachHangAdapter(@NonNull Context context, Fragment_QLKhachHang fragment_khachHang, ArrayList<KhachHang> list) {
         super(context, 0,list);
         this.fragment_khachHang = fragment_khachHang;
@@ -60,7 +62,7 @@ public class KhachHangAdapter extends ArrayAdapter<KhachHang> {
             tvHotenKH = v.findViewById(R.id.tvHoTenKH);
             tvHotenKH.setText("Họ tên: "+item.getHoTen());
             tvSdtKH = v.findViewById(R.id.tvDienThoaiKH);
-            tvSdtKH.setText("Điện Thoại: "+item.getDienThoai());
+            tvSdtKH.setText("SdT: "+item.getDienThoai());
             tvDiaChi = v.findViewById(R.id.tvDiaChiKH);
             tvDiaChi.setText("Địa chỉ: "+item.getDiaChi());
             tvGmailKH = v.findViewById(R.id.tvGmailKH);
@@ -74,9 +76,13 @@ public class KhachHangAdapter extends ArrayAdapter<KhachHang> {
         imgUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-             UpdateKH(getContext());
+
+//             UpdateKH(getContext() , item);
+                openDialog(context,item);
             }
+
         });
+
         imgDel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -89,7 +95,7 @@ public class KhachHangAdapter extends ArrayAdapter<KhachHang> {
 
     }
 
-    public void UpdateKH(Context context){
+    public void UpdateKH(Context context , KhachHang item){
         // Sử dụng AlertDialog
         dao = new KhachHang_Dao(getContext());
 
@@ -101,7 +107,7 @@ public class KhachHangAdapter extends ArrayAdapter<KhachHang> {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
 
-                 openDialog(getContext());
+                 openDialog(getContext() , item);
             }
         });
         builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -114,7 +120,7 @@ public class KhachHangAdapter extends ArrayAdapter<KhachHang> {
         builder.show();
     }
 
-    protected void openDialog(final Context context) {
+    protected void openDialog(final Context context , KhachHang item) {
         dialog = new Dialog(context);
         dialog.setContentView(R.layout.khachhang_dialog);
         edMaKH = dialog.findViewById(R.id.edMaKhachHang);
@@ -124,6 +130,12 @@ public class KhachHangAdapter extends ArrayAdapter<KhachHang> {
         edGmailKH = dialog.findViewById(R.id.edGmail);
         btnSave = dialog.findViewById(R.id.btnSaveTV);
         btnCancel = dialog.findViewById(R.id.btnCancelTV);
+//        item = new KhachHang();
+//        edMaKH.setText(item.getMaKH());
+            edHoTenKH.setText(item.getHoTen());
+            edDienThoaiKH.setText(item.getDienThoai());
+            edDiaChiKH.setText(item.getDiaChi());
+            edGmailKH.setText(item.getGmail());
 
 
         btnCancel.setOnClickListener(new View.OnClickListener() {
@@ -135,8 +147,10 @@ public class KhachHangAdapter extends ArrayAdapter<KhachHang> {
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 dao = new KhachHang_Dao(getContext());
-                item = new KhachHang();
+//                item = new KhachHang();
+//                item = dao.getMaKH(maKH);
 
                 item.setHoTen(edHoTenKH.getText().toString());
                 item.setDienThoai(edDienThoaiKH.getText().toString());
@@ -144,13 +158,17 @@ public class KhachHangAdapter extends ArrayAdapter<KhachHang> {
                 item.setGmail(edGmailKH.getText().toString());
 
 
+
                     if (dao.updateKH(item)>0){
+//                        Bundle bundle = new Bundle();
+//                        bundle.putString("maKH", String.valueOf(item.getMaKH()));
                         Toast.makeText(context, "Update thành công", Toast.LENGTH_SHORT).show();
                         capNhatLV();
                     }else {
                         Toast.makeText(context, "Update không thành công", Toast.LENGTH_SHORT).show();
 
                     }
+//                    capNhatLV();
                 dialog.dismiss();
 
                 }

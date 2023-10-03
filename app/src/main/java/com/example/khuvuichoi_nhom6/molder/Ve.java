@@ -2,13 +2,15 @@ package com.example.khuvuichoi_nhom6.molder;
 
 public class Ve {
     private int MaVe;
-    private int status;
+    private String status;
 
 
 //    public Ve() {
 //       this.MaVe  = maVe;
 //        this.status = status;
 //    }
+
+
 
 
     public int getMaVe() {
@@ -19,11 +21,11 @@ public class Ve {
         MaVe = maVe;
     }
 
-    public int getStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(int status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 }
