@@ -1,5 +1,6 @@
 package com.example.khuvuichoi_nhom6;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -53,8 +54,12 @@ public class ManChinh_NhanVien extends AppCompatActivity {
                     fragment = new Fragment_QLKhachHang();
                     toolbar.setTitle("Quản Lý Khách Hàng");
             }else if (item.getItemId() == R.id.nav_logout) {
-                finish();
                 toolbar.setTitle("Logout");
+//                    Intent intent = new Intent(getApplication(), Login.class);
+//                    startActivity(intent);
+//                    startActivity(new Intent(ManChinh_NhanVien.this, Login.class));
+                    finish();
+
             }
                 getSupportFragmentManager().beginTransaction().replace(R.id.linerlayout,fragment).commit();
                 getSupportActionBar().setTitle(item.getTitle());

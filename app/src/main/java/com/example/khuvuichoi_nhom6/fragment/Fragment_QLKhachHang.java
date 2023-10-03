@@ -79,7 +79,7 @@ private Context context;
         btnSave = dialog.findViewById(R.id.btnSaveTV);
         btnCancel = dialog.findViewById(R.id.btnCancelTV);
 
-        // Kiểm tra type insert 0 hay update 1
+//         Kiểm tra type insert 0 hay update 1
 //        edMaKH.setEnabled(false);
 //        if (type != 0) {
 //            edMaKH.setText(item.getMaKH());
