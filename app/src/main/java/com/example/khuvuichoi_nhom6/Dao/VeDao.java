@@ -42,13 +42,14 @@ public class VeDao {
         return db.update("ve", values, "maVe=?", new String[]{String.valueOf(obj.getMaVe())});
     }
 
-    public int deteleVe(String id) {
-        return db.delete("ve", "maVe=?", new String[]{String.valueOf(id)});
+    public int deteleVe(Ve obj) {
+        return db.delete("ve", "maVe=?", new String[]{String.valueOf(obj.getMaVe())});
     }
 
     public List<Ve> getAll() {
         String sql = "SELECT * FROM ve";
-        return getData(sql);
+        List<Ve> list = getData(sql);
+        return list;
     }
 
     @SuppressLint("Range")
@@ -58,8 +59,9 @@ public class VeDao {
         while (cursor.moveToNext()) {
             Ve ve = new Ve();
           ve.setMaVe(cursor.getInt(cursor.getColumnIndex("maVe")));
-          ve.setStatus(cursor.getInt(cursor.getColumnIndex("status")));
-
+//          ve.setStatus(cursor.getInt(cursor.getColumnIndex("status")));
+            ve.setStatus(cursor.getString(cursor.getColumnIndex("status")));
+            list.add(ve);
         }
         return list;
 
