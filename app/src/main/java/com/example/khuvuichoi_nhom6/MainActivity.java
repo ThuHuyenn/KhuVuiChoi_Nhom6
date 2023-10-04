@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.khuvuichoi_nhom6.fragment.Fragment_DangKyVe;
 import com.example.khuvuichoi_nhom6.fragment.Fragment_QuyDinh;
 import com.example.khuvuichoi_nhom6.fragment.InformationFragment;
 import com.example.khuvuichoi_nhom6.fragment.View_ventFragment;
@@ -49,7 +50,12 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId();
                 FragmentManager manager = getSupportFragmentManager();
-                if (id == R.id.nav_View_Vent){
+                if (id == R.id.nav_dangkysve){
+                    setTitle("Đăng ký  vé");
+                    Fragment_DangKyVe fragmentDangKyVe = new Fragment_DangKyVe();
+                    manager.beginTransaction().replace(R.id.flContent,fragmentDangKyVe)
+                            .commit();}
+                else if(id == R.id.nav_View_Vent){
                     setTitle("Sự Kiện");
                     View_ventFragment view_ventFragment = new View_ventFragment();
                     manager.beginTransaction().replace(R.id.flContent,view_ventFragment)

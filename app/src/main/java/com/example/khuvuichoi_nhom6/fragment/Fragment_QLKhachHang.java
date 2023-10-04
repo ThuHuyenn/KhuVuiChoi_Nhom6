@@ -39,7 +39,7 @@ public class Fragment_QLKhachHang extends Fragment {
      KhachHang item;
     private EditText edMaKH, edHoTenKH, edDienThoaiKH, edDiaChiKH, edGmailKH;
     Button btnSave, btnCancel;
-private Context context;
+    private Context context;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -157,7 +157,6 @@ private Context context;
         list = (ArrayList<KhachHang>) dao.getAll();
         adapter = new KhachHangAdapter(getActivity(), this, list);
         lv.setAdapter(adapter);
-
 
     }
 

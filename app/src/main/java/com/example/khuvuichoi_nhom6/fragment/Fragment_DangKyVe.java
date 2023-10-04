@@ -1,5 +1,7 @@
 package com.example.khuvuichoi_nhom6.fragment;
 
+
+
 import static com.example.khuvuichoi_nhom6.R.id.lvVe;
 
 import android.annotation.SuppressLint;
@@ -21,10 +23,8 @@ import android.widget.Toast;
 import androidx.fragment.app.Fragment;
 
 import com.example.khuvuichoi_nhom6.Adapter.VeAdapter;
-import com.example.khuvuichoi_nhom6.Dao.KhachHang_Dao;
 import com.example.khuvuichoi_nhom6.Dao.VeDao;
 import com.example.khuvuichoi_nhom6.R;
-import com.example.khuvuichoi_nhom6.molder.KhachHang;
 import com.example.khuvuichoi_nhom6.molder.Ve;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -38,9 +38,9 @@ public class Fragment_DangKyVe extends Fragment {
     EditText edMaVe,edVe;
     CheckBox chkStatus;
     Button btnSave,btnCancel;
-     Ve item;
+    Ve item;
     static VeDao dao;
-   private VeAdapter adapter;
+    private VeAdapter adapter;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -52,7 +52,7 @@ public class Fragment_DangKyVe extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-       View view= inflater.inflate(R.layout.fragment__dang_ky_ve, container, false);
+        View view= inflater.inflate(R.layout.fragment__dang_ky_ve, container, false);
         lv = view.findViewById(lvVe);
         fab = view.findViewById(R.id.fab);
         dao = new VeDao(getActivity());
@@ -101,21 +101,21 @@ public class Fragment_DangKyVe extends Fragment {
                 item = new Ve();
                 item.setStatus(edVe.getText().toString());
 
-              if (validate()>0){
+                if (validate()>0){
 
-                      // type = 0 (insert)
+                    // type = 0 (insert)
 
-                      if (dao.addVe(item)>0){
-                          Toast.makeText(context, "Thêm  thành công", Toast.LENGTH_SHORT).show();
-                      }else {
-                          Toast.makeText(context, "Thêm không thành công", Toast.LENGTH_SHORT).show();
+                    if (dao.addVe(item)>0){
+                        Toast.makeText(context, "Thêm  thành công", Toast.LENGTH_SHORT).show();
+                    }else {
+                        Toast.makeText(context, "Thêm không thành công", Toast.LENGTH_SHORT).show();
 
-                      }
+                    }
 
-              }
+                }
                 capNhatLV();
                 dialog.dismiss();
-               }
+            }
 
         });
         dialog.show();

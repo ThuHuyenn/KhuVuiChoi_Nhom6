@@ -1,8 +1,14 @@
 package com.example.khuvuichoi_nhom6.Adapter;
 
+import static com.example.khuvuichoi_nhom6.R.id.lvVe;
+
+import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.Color;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +17,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,13 +30,14 @@ import com.example.khuvuichoi_nhom6.R;
 import com.example.khuvuichoi_nhom6.fragment.Fragment_DangKyVe;
 import com.example.khuvuichoi_nhom6.molder.KhachHang;
 import com.example.khuvuichoi_nhom6.molder.Ve;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
 public class VeAdapter  extends ArrayAdapter<Ve> {
     private Context context;
 
-Fragment_DangKyVe fragmentDangKyVe;
+    Fragment_DangKyVe fragmentDangKyVe;
     private ArrayList<Ve> list;
     TextView tvMaVe,tvStatus;
     ImageView imgDel,imgUpdate;
@@ -62,7 +70,7 @@ Fragment_DangKyVe fragmentDangKyVe;
 
             tvStatus= v.findViewById(R.id.tvStatus);
 
-             tvStatus.setText("Ve: "+item.getStatus());
+            tvStatus.setText("Ve: "+item.getStatus());
 
             imgDel = v.findViewById(R.id.imgDeleteLS);
             imgUpdate= v.findViewById(R.id.imgUpdateVe);
@@ -83,42 +91,42 @@ Fragment_DangKyVe fragmentDangKyVe;
         return v;
 
     }
-   protected void Update(Context context, Ve item){
-       dialog = new Dialog(context);
-       dialog.setContentView(R.layout.ve_dialog);
-       edMaVe = dialog.findViewById(R.id.edMaVe);
-       edVe = dialog.findViewById(R.id.edVe);
-       btnCancel = dialog.findViewById(R.id.btnCancelVe);
-       btnSave = dialog.findViewById(R.id.btnSaveVe);
+    protected void Update(Context context, Ve item){
+        dialog = new Dialog(context);
+        dialog.setContentView(R.layout.ve_dialog);
+        edMaVe = dialog.findViewById(R.id.edMaVe);
+        edVe = dialog.findViewById(R.id.edVe);
+        btnCancel = dialog.findViewById(R.id.btnCancelVe);
+        btnSave = dialog.findViewById(R.id.btnSaveVe);
 
-       edVe.setText(item.getStatus());
-       btnCancel.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View view) {
-               dialog.dismiss();
-           }
-       });
-       btnSave.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View view) {
-            dao = new VeDao(getContext());
-            item.setStatus(edVe.getText().toString());
-               if (dao.updateVe(item)>0){
+        edVe.setText(item.getStatus());
+        btnCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+        btnSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dao = new VeDao(getContext());
+                item.setStatus(edVe.getText().toString());
+                if (dao.updateVe(item)>0){
 //
-                   Toast.makeText(context, "Update thành công", Toast.LENGTH_SHORT).show();
-                   capNhatLV();
+                    Toast.makeText(context, "Update thành công", Toast.LENGTH_SHORT).show();
+                    capNhatLV();
 
-               }else {
-                   Toast.makeText(context, "Update không thành công", Toast.LENGTH_SHORT).show();
+                }else {
+                    Toast.makeText(context, "Update không thành công", Toast.LENGTH_SHORT).show();
 
-               }
+                }
 //                    capNhatLV();
-               dialog.dismiss();
-           }
-       });
-       dialog.show();
+                dialog.dismiss();
+            }
+        });
+        dialog.show();
 
-   }
+    }
     public void capNhatLV() {
         dao = new VeDao(getContext());
         list = (ArrayList<Ve>) dao.getAll();

@@ -8,6 +8,10 @@
         <menu>
             <group android:checkableBehavior="single">
                 <item
+                    android:id="@+id/nav_dangkysve"
+                    android:icon="@drawable/ic_event_24"
+                    android:title="Đăng ký vé" />
+                <item
                     android:id="@+id/nav_View_Vent"
                     android:icon="@drawable/ic_event_24"
                     android:title="Sự kiện" />
