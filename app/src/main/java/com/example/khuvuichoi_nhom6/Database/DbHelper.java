@@ -5,7 +5,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DbHelper extends SQLiteOpenHelper {
     public DbHelper(Context context){
-        super(context,"QLDA_Nhom6_1",null, 1);
+        super(context,"QLDA_Nhom6_1",null, 3);
     }
 
     @Override
@@ -30,7 +30,17 @@ public class DbHelper extends SQLiteOpenHelper {
                 "maVe INTEGER PRIMARY KEY AUTOINCREMENT," +
                 "status TEXT NOT NULL )";
         db.execSQL(ve);
-
+        String hoadon = "CREATE TABLE hoadon(" +
+                "id_hoadon INTEGER  PRIMARY KEY AUTOINCREMENT," +
+                "maKH INTEGER REFERENCES KhachHang(maKH)," +
+                "MaVe INTEGER REFERENCES ve(MaVe)," +
+                "giatien TEXT NOT NULL," +
+                "time TEXT NOT NULL,"+
+                "thanhtoan TEXT NOT NULL,"+
+                "statusHD NOT NULL)";
+        db.execSQL(hoadon);
+        String sqlhoadon = "INSERT INTO hoadon VALUES(1,1,1,50000,'31/08/2003','1','1')";
+        db.execSQL(sqlhoadon);
 
     }
 
@@ -41,6 +51,7 @@ public class DbHelper extends SQLiteOpenHelper {
             db.execSQL("DROP TABLE IF EXISTS nhanvien");
             db.execSQL("DROP TABLE IF EXISTS  KhachHang");
             db.execSQL("DROP TABLE IF EXISTS  ve");
+            db.execSQL("DROP TABLE IF EXISTS  hoadon");
             onCreate(db);
         }
     }

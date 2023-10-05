@@ -56,6 +56,7 @@ public class KhachHang_Dao {
         return list;
     }
     public KhachHang getMaKH(String maKH) {
+        db = dbHelper.getWritableDatabase();
         String sql = "SELECT * FROM KhachHang WHERE maKH = ?";
         List<KhachHang> list = getData(sql, maKH);
         return list.get(0);

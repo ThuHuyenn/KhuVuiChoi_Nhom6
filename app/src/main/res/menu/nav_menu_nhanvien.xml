@@ -3,7 +3,7 @@
     <item
         android:id="@+id/nav_dangky"
         android:icon="@drawable/ic_ve"
-        android:title="Đăng Ký Vé"/>
+        android:title="Xác nhận vé Khách Hàng"/>
 
     <item
         android:id="@+id/nav_hoadon"
