@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Khách Hàng">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_dangkyve"
+                    android:icon="@drawable/ic_dangkyve"
+                    android:title="Đăng ký vé" />
+                <item
+                    android:id="@+id/nav_view"
+                    android:icon="@drawable/ic_event"
+                    android:title="Sự kiện" />
+                <item
+                    android:id="@+id/nav_Information"
+                    android:icon="@drawable/ic_information_24"
+                    android:title="Thông Tin" />
+            </group>
+        </menu>
+    </item>
+    <item android:title="Quản lý / Nhân viên">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_Login"
+                    android:icon="@drawable/ic_login"
+                    android:title="Login " />
+
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="*****">
+        <menu>
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_logout"
+                android:title="Exit" />
+        </menu>
+    </item>
+</menu>

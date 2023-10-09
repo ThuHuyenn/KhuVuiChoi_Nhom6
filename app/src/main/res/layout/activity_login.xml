@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Login">
+
+    <ImageView
+        android:layout_width="367dp"
+        android:layout_height="245dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="40dp"
+        android:src="@drawable/logo" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ed_user"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#DCD3D3"
+            android:hint="Username"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:passwordToggleEnabled="true"
+        android:layout_marginBottom="20dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ed_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textWebPassword"
+            android:layout_margin="10dp"
+            android:maxLines="1"
+            android:background="#DCD3D3"
+            android:hint="Password"/>
+
+        <CheckBox
+            android:id="@+id/chkRemember"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:text="Remember?" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="157dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:backgroundTint="#7A7777"
+            android:text="Login" />
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_quenmk"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forget Password?"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:layout_marginTop="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bạn chưa có tài khoản? "
+            android:layout_marginRight="5dp"
+            android:textSize="15dp"/>
+        <TextView
+            android:id="@+id/tv_dangky"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đăng ký tại đây"
+            android:textSize="15dp"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+</LinearLayout>

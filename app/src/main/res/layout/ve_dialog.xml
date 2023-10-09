@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    >
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_maVe"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:startIconDrawable="@drawable/ic_baseline_hoten_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edMaVe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mã khách hàng" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_Ve"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:startIconDrawable="@drawable/ic_baseline_hoten_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edVe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint=" Ve" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_gmail"
+        tools:layout_editor_absoluteX="24dp"
+        tools:ignore="UnknownIdInLayout">
+
+        <Button
+            android:id="@+id/btnSaveVe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_weight="1"
+            android:backgroundTint="#2196F3"
+            android:text="Lưu" />
+
+        <Button
+            android:id="@+id/btnCancelVe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_weight="1"
+            android:backgroundTint="#2196F3"
+            android:text="Hủy" />
+    </LinearLayout>
+
+</LinearLayout>

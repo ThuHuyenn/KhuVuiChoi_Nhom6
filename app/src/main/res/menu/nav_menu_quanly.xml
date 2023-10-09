@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/nav_qlnhanvien"
+        android:icon="@drawable/ic_people"
+        android:title="Quản Lý Nhân Viên"/>
+    <item
+        android:id="@+id/nav_qlkhachhang"
+        android:icon="@drawable/ic_people"
+        android:title="Quản Lý Khách Hàng"/>
+    <item
+        android:id="@+id/nav_hoadon"
+        android:icon="@drawable/ic_id_hoa_don"
+        android:title="Hóa Đơn-DoanhThu"/>
+
+    <item
+        android:id="@+id/nav_logout"
+        android:icon="@drawable/ic_logout"
+        android:title="Thoát"/>
+
+</menu>
