@@ -28,6 +28,7 @@ public class Bat_Lo_xoFragment extends Fragment {
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), MainActivity.class);
                 startActivity(intent);
+                // kiet
             }
         });
         return view;
