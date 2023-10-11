@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.SuKien.Bat_Lo_xoFragment">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bạt nhún lò xo  "
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="#F44336"
+        android:textSize="30dp"/>
+    <ImageView
+        android:src="@drawable/img_1"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:textSize="19dp"
+        android:text="Đây là trò chơi vận động phù hợp với những ai ưa trải nghiệm cảm giác mạnh. Nó giúp đem đến cho bạn được khả năng chống lực và tăng khả năng tư duy cũng như tập trung. Với hệ thống núi giả được tạo ra sẽ cho bạn cảm giác trải nghiệm y như thật. Đây là trò chơi thu hút được sự chú ý của khá nhiều bạn trẻ khi đến với Công viên bạt lò xo Trampoline Park.
+
+Công viên bạt lò xo Trampoline Park thực sự sẽ đem đến cho bạn nhiều trải nghiệm mới mẻ hấp dẫn với hệ thống các trò chơi đa dạng. Hiện nay việc kinh doanh các mô hình khu vui chơi giải trí ngày càng nhiều. Nếu như bạn đang muốn thiết kế không gian khu vui chơi giải trí mới, có thể liên hệ với Công viên để nhận tư vấn nhé!"
+    />
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.SuKien.NhaBongFragment">
+
+   <TextView
+       android:id="@+id/textView"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="Nhà Bóng "
+       android:gravity="center"
+       android:textStyle="bold"
+       android:textColor="#F44336"
+       android:textSize="30dp"/>
+    <ImageView
+        android:src="@drawable/anh5"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:text="Một loại nhà bóng phổ biến khác cũng được nhiều bé yêu thích, đó là nhà bóng bằng nhựa. Thay vì thiết kế bằng vải và khung kim loại như trên, nhà bóng bằng nhựa được thiết kế hoàn toàn từ nhựa cứng, gồm nhiều mảnh ghép lại và quây kín lại với nhau trông hao hao giống với chiếc giường cũi của bé. Mẹ có thể tháo bớt hoặc thêm các mảnh ghép sao cho phù hợp với không gian. Phần cửa nhà bóng có khóa an toàn giúp bé thoải mái chơi đùa bên trong mà không lo nhà bóng bị bật ra ngoài.Ưu điểm của nhà bóng bằng nhựa là có thiết kế dày dặn, bền đẹp, mang lại cảm giác vững chãi, chắc chắn cho bé, phù hợp với không gian vui chơi ngoài trời. Vì vậy, mẹ có thể kết hợp nhà bóng với các loại đồ chơi trẻ em khác như cầu trượt để tạo nên khu vui chơi liên hoàn cho bé rất thú vị."/>
+
+
+
+
+
+</LinearLayout>

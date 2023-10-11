@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.SuKien.Cong_VienFragment">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" Công Viên Nước "
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="#F44336"
+        android:textSize="30dp"/>
+    <ImageView
+        android:src="@drawable/anh4"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"/>
+    <TextView
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:text="Vào mỗi dịp hè đến, đông đảo người dân lẫn du khách lại đổ về công viên nước để giải nhiệt và tránh nóng, khiến công viên lúc nào cũng nhộn nhịp. Vậy công viên nước thực chất là gì? Đây là một dạng của công viên giải trí, được xây dựng trong nhà hoặc ngoài trời. Các trò chơi ở công viên nước nổi bật như: những đường trượt sắc màu, đa dạng kiểu thiết kế, từ nhẹ nhàng phù hợp với đối tượng là trẻ em cho tới đường trượt có độ xoáy khủng tạo cảm giác mạnh, bể tạo sóng, sông lười, hệ thống phao nổi, sân chơi phun nước, đi bộ dưới nước, đảo hải tặc,…"
+        />
+
+
+</LinearLayout>

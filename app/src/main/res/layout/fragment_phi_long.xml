@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.SuKien.PhiLongFragment">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Phi Long Thần tốc  "
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="#F44336"
+        android:textSize="30dp"/>
+    <ImageView
+        android:src="@drawable/anh2"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:text="Là trò chơi mạo hiểm cường độ mạnh nhất tại công viên Dragon Park, cũng là trò chơi làm nên tên tuổi của công viên này. Phi Long Thần Tốc là tàu lượn siêu tốc có đường ray dài nhất thế giới với 3 vòng xoáy cực đại, vận tốc lớn nhất lên đến 105 km/h, đảm bảo sẽ mang đến cho bạn cảm giác thử thách cực mạnh.
+Khuyến cáo: Những người yếu tim, sợ độ cao và tốc độ không nên chơi trò chơi này.
+Ngoài ra, để đảm bảo an toàn Phi Long Thần Tốc có giới hạn chiều cao của người tham gia với chiều cao tối thiểu là 140 cm."
+        android:textSize="19dp"/>
+
+</LinearLayout>

@@ -99,13 +99,16 @@ private Context context;
             public void onClick(View view) {
                 dao = new KhachHang_Dao(getContext());
                 item = new KhachHang();
-
                 item.setHoTen(edHoTenKH.getText().toString());
                 item.setDienThoai(edDienThoaiKH.getText().toString());
                 item.setDiaChi(edDiaChiKH.getText().toString());
                 item.setGmail(edGmailKH.getText().toString());
-                if (valiDate()){
 
+                if (validate()>0){
+                    item.setHoTen(edHoTenKH.getText().toString());
+                    item.setDienThoai(edDienThoaiKH.getText().toString());
+                    item.setDiaChi(edDiaChiKH.getText().toString());
+                    item.setGmail(edGmailKH.getText().toString());
                         if (dao.addKH(item)>0){
                             Toast.makeText(context, "Thêm  thành công", Toast.LENGTH_SHORT).show();
                         }else {
@@ -161,27 +164,17 @@ private Context context;
 
     }
 
-    public boolean valiDate() {
-        if (
-                edHoTenKH.getText().length() == 0 ||
-                        edDienThoaiKH.getText().length() == 0 ||
-                        edDiaChiKH.getText().length() == 0) {
 
-
-            edHoTenKH.setError("Bạn cần nhập đầy đủ thông tin Họ tên!");
-            edDienThoaiKH.setError("Bạn cần nhập đầy đủ thông tin số điện thoại!");
-            edDiaChiKH.setError("Bạn cần nhập đầy đủ thông tin địa chỉ!");
-            edGmailKH.setError("Ban can nham du ga");
-            return false;
+    public int validate(){
+        int check = 1;
+        if ( edHoTenKH.getText().length() == 0 ||
+                edDienThoaiKH.getText().length() == 0 ||
+                edDiaChiKH.getText().length() == 0 ||
+                edGmailKH.getText().length() == 0){
+            Toast.makeText(getContext(), "Dữ liệu không được để trống", Toast.LENGTH_SHORT).show();
+            check = -1;
         }
-
-//        if (edDienThoaiKH.getText().length() < 10 ||
-//                edDienThoaiKH.getText().length() > 11 ||
-//                Pattern.matches("[a-zA-Z]+", edDienThoaiKH.getText().toString())) {
-//            Toast.makeText(appCompatActivity, "Sai độ dài số điện thoại", Toast.LENGTH_SHORT).show();
-//            return false;
-//        }
-        return true;
+        return check;
     }
 
 }

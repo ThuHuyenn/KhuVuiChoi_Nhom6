@@ -21,7 +21,9 @@ public class KhachHang_Dao {
         dbHelper = new DbHelper(context);
         db = dbHelper.getWritableDatabase();
     }
-
+    public void open() {
+       db = dbHelper.getWritableDatabase();
+    }
 
 
     public void close() {
@@ -66,6 +68,28 @@ public class KhachHang_Dao {
         List<KhachHang> list = getData(sql, maKH);
         return list.size() == 0 ? -1 : 1;
     }
+    @SuppressLint("Range")
+    public int getCountKH() {
+        String sql = "SELECT COUNT(*) AS SoLuong FROM KhachHang";
+        Cursor cursor = db.rawQuery(sql, null);
+        cursor.moveToFirst();
+        return cursor.getInt(cursor.getColumnIndex("SoLuong"));
+    }
+    @SuppressLint("Range")
+    public int getCountVe() {
+        String sql = "SELECT COUNT(*) AS SoLuong FROM ve";
+        Cursor cursor = db.rawQuery(sql, null);
+        cursor.moveToFirst();
+        return cursor.getInt(cursor.getColumnIndex("SoLuong"));
+    }
+    @SuppressLint("Range")
+    public int getCountNV() {
+        String sql = "SELECT COUNT(*) AS SoLuong FROM nhanvien";
+        Cursor cursor = db.rawQuery(sql, null);
+        cursor.moveToFirst();
+        return cursor.getInt(cursor.getColumnIndex("SoLuong"));
+    }
+
     @SuppressLint("Range")
     public List<KhachHang> getData(String sql, String... args) {
         List<KhachHang> list = new ArrayList<>();

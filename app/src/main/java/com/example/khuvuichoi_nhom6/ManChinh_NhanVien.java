@@ -28,7 +28,7 @@ public class ManChinh_NhanVien extends AppCompatActivity {
         setContentView(R.layout.activity_man_chinh_nhanvien);
 
         drawerLayout = findViewById(R.id.main_drawlayout);
-        toolbar = findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar1);
         navigationView = findViewById(R.id.navigation);
 
         setSupportActionBar(toolbar);
